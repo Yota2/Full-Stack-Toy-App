@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th= "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>toys</title>
+</head>
+<body>
+
+<div th:each="speelgoed:${toys}">
+
+<h5>Name:</h5>
+<p th:text="${speelgoed.name}"></p>
+<h5>Brand:</h5>
+<p th:text="${speelgoed.brand}"></p>
+<h5>Price:</h5>
+<p th:text="${speelgoed.price}"></p>
+<img th:src="@{/images/{toyImage}(toyImage= ${speelgoed.imageLocation})}">
+<hr>
+</div>
+
+</body>
+</html>
